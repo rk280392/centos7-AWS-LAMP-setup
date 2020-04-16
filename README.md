@@ -21,3 +21,6 @@ This helps to setup centos7 machine with lamp setup on AWS EC2 instance. At the 
 10 - change private_key_file in ansible.cfg
 
 11 - run ansible-playbook. ansible-playbook -i hosts launch-ec2.yml 
+
+
+NOTE - I have added all tasks under same playbook, you can make seperate playbooks.
