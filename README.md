@@ -16,8 +16,8 @@ This helps to setup centos7 machine with lamp setup on AWS EC2 instance. At the 
 
 8 - clone the repository.
 
-9 - Make sure to edit the keypair variable and use your keypair name with proper path
+9 - make sure to edit the keypair variable and use your keypair name with proper path
 
 10 - change private_key_file in ansible.cfg
 
-10 - run ansible-playbook. ansible-playbook -i hosts launch-ec2.yml 
+11 - run ansible-playbook. ansible-playbook -i hosts launch-ec2.yml 
