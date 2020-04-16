@@ -79,21 +79,6 @@
                             - net-tools
                             - vim
                             - python3
-          - name: Create a user
-            user:
-                    name: rajesh
-                    state: present
-                    # password enrypted using "mkpasswd --method=sha-512". you can use your username password.
-                    password: $6$P5dO1ILccs$lymSE7eqaC56W4tOn8AXEHBJFKByR4ycVlKJzP7HVePAG5JdZUbF2XqpxL5DiwOrDz0qk8HgN/At9i7VjQfxq0 
-                    shell: /bin/bash
-                    system: yes
-                    createhome: yes
-          - name: Adding user into sudoers file
-            lineinfile:
-                    path: /etc/sudoers
-                    insertafter: '^# User privilege'
-                    line: rajesh ALL=(ALL:ALL) ALL
-                    state: present
           - name: getting rsa of github
             shell: ssh-keyscan -t rsa github.com
             register: sshrsa
