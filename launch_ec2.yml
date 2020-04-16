@@ -71,11 +71,7 @@
           dbuser: mywebuser  
           mysqlservice: mysqld  
           httpd_port: 80 
-          #    ansible_python_interpreter: /bin/python 
-          #ansible_user: rajesh 
-          # ansible_ssh_pass: 'wifi123#' 
           repository: https://github.com/rk280392/test-app.git 
-          #ansible_ssh_private_key_file: /home/rajesh-pc/.ssh/id_rsa
   tasks:
           - name: Install necessary packages
             yum:
@@ -186,12 +182,6 @@
                     enabled: yes
           - name: Inserting firewall rule
             firewalld: port={{ httpd_port }}/tcp state=enabled permanent=yes immediate=yes
-                  #    - name: Changing the default page
-                  # lineinfile:
-                  #  path: /etc/httpd/conf/httpd.conf
-                  #  regexp: "^DirectoryIndex "
-                  #  insertafter: "^#DirectoryIndex "
-                  #  line: DirectoryIndex index.php 
           - name: Set index.php as the default page
             tags: "Set index.php as the default page"
             replace:
