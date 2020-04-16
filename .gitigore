@@ -1,0 +1,6 @@
+ansible_key
+aws_keys.yml
+aws_provisioning.yml
+rootkey.csv
+my-wordpress.pem
+

@@ -1,0 +1,5 @@
+# Inventory File
+
+
+[my_server]
+centos mysql_port=3306/tcp dbname=mywebdb dbpassword=mywebpassword dbuser=mywebuser  mysqlservice=mysqld  ansible_host=13.233.75.85 httpd_port=80 ansible_python_interpreter=/bin/python ansible_user=rajesh ansible_ssh_pass='wifi123#' repository=https://github.com/rk280392/test-app.git ansible_ssh_private_key_file=/home/rajesh-pc/.ssh/id_rsa
